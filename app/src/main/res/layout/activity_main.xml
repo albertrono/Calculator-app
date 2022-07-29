@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/almostBlack"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/workingtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:lines="2"
+            android:maxLines="2"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/resultstv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/resultstv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.825"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.775" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        style="@style/btn_row">
+        <Button
+            style="@style/btn_num"
+            android:onClick="action_clear_all"
+            android:textColor="@color/red"
+            android:text="AC"/>
+        <Button
+            style="@style/btn_num"
+            android:onClick="action_delete"
+            android:text="DEL"/>
+        <Button
+            style="@style/btn_operator"
+            android:text="+"/>
+    </LinearLayout>
+
+    <LinearLayout
+       style="@style/btn_row">
+
+        <Button
+            style="@style/btn_num"
+            android:text="7"/>
+        <Button
+            style="@style/btn_num"
+            android:text="8"/>
+
+        <Button
+            style="@style/btn_num"
+            android:text="9"/>
+
+        <Button
+            android:id="@+id/x"
+            style="@style/btn_operator"
+            android:text="x" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/btn_row">
+        <Button
+            style="@style/btn_num"
+            android:onClick="action_num"
+            android:text="4"/>
+        <Button
+            style="@style/btn_num"
+            android:text="5"/>
+        <Button
+            style="@style/btn_num"
+            android:text="6"/>
+        <Button
+            style="@style/btn_operator"
+            android:text="/"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/btn_row">
+    <Button
+        style="@style/btn_num"
+        android:text="1"/>
+    <Button
+        style="@style/btn_num"
+        android:text="2"/>
+    <Button
+        style="@style/btn_num"
+        android:text="3"/>
+    <Button
+        style="@style/btn_operator"
+        android:text="-"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/btn_row">
+        <Button
+            style="@style/btn_num"
+            android:text="."/>
+
+        <Button
+            style="@style/btn_num"
+            android:layout_width="6dp"
+            android:text="0" />
+
+        <Button
+            style="@style/btn_num"
+            android:layout_weight="2"
+            android:background="@color/orange"
+            android:onClick="action_equals"
+            android:text="="
+            android:textColor="#455A64"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
